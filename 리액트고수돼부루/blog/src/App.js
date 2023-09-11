@@ -6,12 +6,12 @@ import { useState } from 'react';
 
 function App() {
 
-  let post = '역삼 라멘 맛집';
+  let post = '역삼 돈까스 맛집';
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']);
   let [따봉, 따봉변경] = useState([0,0,0]);
   let [modal, setModal] = useState(false);
-  let [index, setIndex] = useState();
-  let [date, setDate] = useState(['9월 11일 발행', '9월 12일 발행', '9월 13일 발행']);
+  let [index, setIndex] = useState(0);
+  let [date, setDate] = useState(['9월 11일', '9월 12일', '9월 13일']);
 
   // [1,2,3].map(function(a) {
   //   return '123131';  
@@ -73,7 +73,7 @@ function App() {
                   따봉변경(copy); 
                 
                 } }>👍</span> {따봉[i]} </h4>
-              <p>{date[i]}</p>
+              <p>{date[i]} 발행</p>
             </div>
           )
         })
@@ -95,13 +95,13 @@ function Modal(props) {
     <>
       <div className='modal'>
         <h4>{props.글제목[props.index]}</h4>
-        <p>{props.date[props.index]}</p>
+        <p>{props.date[props.index]} 발행</p>
         <p>상세내용</p>
         <button onClick={ () => 
         { 
 
           let copy = [...props.글제목];
-          copy[0] = '여자 코트 추천';
+          copy[props.index] = '여자 코트 추천';
 
           props.글제목변경(copy);
 
