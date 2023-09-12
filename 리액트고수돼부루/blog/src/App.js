@@ -11,7 +11,8 @@ function App() {
   let [따봉, 따봉변경] = useState([0,0,0]);
   let [modal, setModal] = useState(false);
   let [index, setIndex] = useState(0);
-  let [date, setDate] = useState(['9월 11일', '9월 12일', '9월 13일']);
+  let [date] = useState(['9월 11일', '9월 12일', '9월 13일']);
+  let [입력값, 입력값변경] = useState('');
 
   // [1,2,3].map(function(a) {
   //   return '123131';  
@@ -64,20 +65,57 @@ function App() {
 
                 setIndex(i);
 
-              } }>{글제목[i]} <span onClick={ () => 
+              } }>{글제목[i]} <span onClick={ (e) => 
                 { 
+                  e.stopPropagation(); // 상위 html로 퍼지는 이벤트 버블링을 막는 코드
 
                   let copy = [...따봉];
                   copy[i] = copy[i] + 1;
 
                   따봉변경(copy); 
                 
-                } }>👍</span> {따봉[i]} </h4>
+                } }>👍</span> {따봉[i]} 
+                <button onClick={ (e) => { 
+
+                  // 내 코드
+
+                  // e.stopPropagation();
+
+                  // let copyy = [...글제목];
+                  // copyy.splice(i, 1);
+
+                  // 글제목변경(copyy);
+
+                  
+                  // 선생님 코드
+
+                  let copy = [...index];
+                  copy.splice(i, 1);
+
+                  setIndex(copy);
+
+                 } }>삭제</button> </h4>
               <p>{date[i]} 발행</p>
             </div>
           )
         })
       }
+
+      <input onChange={(e) => { 
+        입력값변경(e.target.value); 
+        console.log(입력값);
+        }} />
+
+      <button onClick={ () => { 
+
+        // let copy = [입력값, ...글제목];
+
+        let copy = [...글제목];
+        copy.unshift(입력값);
+
+        글제목변경(copy);
+
+       } }>글추가</button>  
 
       {
         modal == true ? <Modal color={'yellow'} 글제목={글제목} 글제목변경={글제목변경} index={index} date={date}/> : null
