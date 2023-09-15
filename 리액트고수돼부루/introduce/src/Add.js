@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Add = ({onCreate, navigate}) => {
+const Add = ({onCreate}) => {
 
     const nameInput = useRef();
     const teameInput = useRef();
@@ -13,7 +13,7 @@ const Add = ({onCreate, navigate}) => {
     const lastNameInput = useRef();
     const imgInput = useRef();
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [state, setState] = useState({
 

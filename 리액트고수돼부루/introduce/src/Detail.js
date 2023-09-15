@@ -14,7 +14,7 @@ const Detail = ({data, onEdit, onRemove, navigate}) => {
         if(window.confirm(`기호 ${id}번 선수를 참말로 삭제할껴??`)) {
             onRemove(player.id);
 
-            navigate('/');
+            {navigate('/')};
         }
     }
 
@@ -46,7 +46,7 @@ const Detail = ({data, onEdit, onRemove, navigate}) => {
                     <>
                     <Edit player={player} origin={origin} setOrigin={setOrigin}/>
                     <Button variant="outlined" onClick={handleEdit}>수정완료해부루</Button>
-                    <Button variant="outlined" color="error" onClick={() => { navigate(-1) }}>돌아가부루</Button>
+                    <Button variant="outlined" color="error" onClick={() => { {navigate(-1)} }}>돌아가부루</Button>
                     </>
                 )
             }
