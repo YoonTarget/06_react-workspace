@@ -20,41 +20,18 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function BasicGrid({data}) {
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-            {
-                data.map((pl, idx) => (
-                    <PlayerCard key={pl.id} {...pl} Item={Item}/>
-                ))
-            }
-            {/* <Grid item xs={4}>
-                <Item className='player'>
-                    <img src={player1} height="500"/>
-                    <div>손흥민</div>
-                    <div>토트넘 핫스퍼</div>
-                    <span><button onClick={() => {setCount(count + 1)}}>💗</button></span>
-                    <span>{count}</span>
-                </Item>
+        <div className='PlayerList'>
+            <h1>축구선수 이상형 찾기</h1>
+            <p>당신의 선택은???</p>
+            <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={2}>
+                {
+                    data.map((pl, idx) => (
+                        <PlayerCard key={pl.id} {...pl} Item={Item}/>
+                    ))
+                }
             </Grid>
-            <Grid item xs={4}>
-                <Item className='player'>
-                    <img src={player2} height="500"/>
-                    <div>이강인</div>
-                    <div>파리 생제르망</div>
-                    <span><button onClick={() => {setCount(count + 1)}}>💗</button></span>
-                    <span>{count}</span>
-                </Item>
-            </Grid>
-            <Grid item xs={4}>
-                <Item className='player'>
-                    <img src={player3} height="500"/>
-                    <div>김민재</div>
-                    <div>바이에른 뮌헨</div>
-                    <span><button onClick={() => {setCount(count + 1)}}>💗</button></span>
-                    <span>{count}</span>
-                </Item>
-            </Grid> */}
-        </Grid>
-        </Box>
+            </Box>
+        </div>
     );
 }

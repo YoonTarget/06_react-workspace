@@ -1,27 +1,36 @@
 let Data = [
     {
         id : 1,
-        name : "손흥민",
-        team : "토트넘 핫스퍼",
-        position : "공격수",
-        feature : "다정한 스타일",
-        img : "https://i.namu.wiki/i/sgEyZYmeiHkZ5zq-zEncJzGxRfmbIHZJWnPrZ-YtMkuFuu9vnWjcG4JDwTM15NNm2a1exux8LpGMZIUNztO7Ps54pG-eTkdaxdTFxxKRl5Y95eys8hPA2nyajSrE6itEX_AK7b6aSGyJG_zh1YK6Mg.webp"
+        name : "음바페",
+        team : "파리 생제르망",
+        position : "윙 포워드",
+        feature : "간, 쓸개 다 퍼주는 스타일",
+        age : 24,
+        height : 178,
+        lastName : "죽산 음씨",
+        img : "https://i.namu.wiki/i/l-WkmU3mjWiW1jcyJ4XA1aEGpRcSi4fb2PWZIT8rylUQQDdnxIj-SGTD02MPwNK9JQoy9tnvXgl7iEyofyiWv2qerXmok0IKskLPnVOIn4DnnWVXWEqEMxpWBUYIOSV4YQT2OkefbB3VLTkVal6IeQ.webp"
     },
     {
         id : 2,
-        name : "이강인",
-        team : "파리 생제르망",
-        position : "미드필더",
-        feature : "귀여운 스타일",
-        img : "https://i.namu.wiki/i/Ya1TkB-rFS4voc6NKvnahEEey9lBz6f5yrh9ZZ5Hx7SgRizpvkaMfnbsAWcymYLEh6oXzzXKZ2zCkoSyf22h05js5Zw1NIkE0AxgKOKgpUQR_xu_hDpIDh7_dV6V6N0JnWj76az5Afeek2x9rrFa0A.webp"
+        name : "비뉴스",
+        team : "레알 마드리드",
+        position : "윙 포워드",
+        feature : "츤데레 스타일",
+        age : 23,
+        height : 176,
+        lastName : "농서 비씨",
+        img : "https://i.namu.wiki/i/hctHiSAoQ9AnlY8jUdenAZJ1kCeSDCjq8pDQ5p2mvv-B5mJLi9XQhct8KXgV9iDfkXrsgUP_3OynPbmv9hX85jFHUyJA4oAf8DVREhrJPW-E1HcKovMi90ABAAhZu6k8-6O6FvQh4xkWyj1ZUYJxsQ.webp"
     },
     {
         id : 3,
-        name : "김민재",
-        team : "바이에른 뮌헨",
-        position : "수비수",
-        feature : "터프한 스타일",
-        img : "https://i.namu.wiki/i/ksErkyOEqnC8aQGxwbuSomP8tV-re-Qrbe4puPPCqIbzU4Iqi3agKEwFDzcLYI_FSl21SzVjjy9ar6Z1mXlM35Y9YG83eUNmeCBjyduPtKaYCkeZGanJBWoJF2EcADv9Crl8VLt-y7CRVI_oRMog8Q.webp"
+        name : "홍란드",
+        team : "맨체스터 시티",
+        position : "스트라이커",
+        feature : "나쁜남자 스타일",
+        age : 23,
+        height : 195,
+        lastName : "남양 홍씨",
+        img : "https://i.namu.wiki/i/1231-DOb8PzBy7KcOmqggrfVhSH1Bo_oIWjEfERZq0IKh7Mg5PodsbTBqIlhzAlAXygGf05JL_EYdfywuvzG7gXNO_KjWl13flXH4YNNOlA2v6csJdtI_KagDlc-oeji0_U9ptc6aVK7e6SC2PhmZQ.webp"
     }
 ];
 
