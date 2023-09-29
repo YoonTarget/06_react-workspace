@@ -1,4 +1,6 @@
-const Origin = ({player}) => {
+import Button from '@mui/material/Button';
+
+const Origin = ({player, handleEdit, handleRemove}) => {
 
     return (
 
@@ -38,6 +40,8 @@ const Origin = ({player}) => {
             </tr>
         </table>
         <br/>
+        <Button variant="outlined" onClick={handleEdit}>수정해부루</Button>
+        <Button variant="outlined" color="error" onClick={handleRemove}>삭제해부루</Button>
         </>
 
     )

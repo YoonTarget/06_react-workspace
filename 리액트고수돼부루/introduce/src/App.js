@@ -43,27 +43,25 @@ function App() {
 
   }
 
-  const onEdit = (targetId, newTeam, newPosition) => {
+  const onEdit = (targetId, newTeam) => {
 
     setData(
       data.map((pl) => (
-        pl.id === targetId ? {...pl, team : newTeam, position : newPosition} : pl
+        pl.id === targetId ? {...pl, team : newTeam} : pl
       ))
     );
 
   }
 
-  const navigate = useNavigate();
-
   return (
     <BrowserRouter>
       <div className="App">
-        <ResponsiveAppBar navigate={navigate}/>
+        <ResponsiveAppBar/>
         <Routes>
           <Route path='/' element={ <BasicGrid data={data}/> }/>
           <Route path='/List' element={ <List/> }/>
-          <Route path='/Add' element={ <Add onCreate={onCreate} navigate={navigate}/> }/>
-          <Route path='/Detail/:id' element={ <Detail data={data} onEdit={onEdit} onRemove={onRemove} navigate={navigate}/> }/>
+          <Route path='/Add' element={ <Add onCreate={onCreate}/> }/>
+          <Route path='/Detail/:id' element={ <Detail data={data} onEdit={onEdit} onRemove={onRemove}/> }/>
         </Routes>
       </div>
     </BrowserRouter>

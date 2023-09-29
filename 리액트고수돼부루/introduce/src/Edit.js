@@ -1,4 +1,6 @@
-const Edit = ({player, origin, setOrigin}) => {
+import Button from '@mui/material/Button';
+
+const Edit = ({player, origin, setOrigin, onEdit, handleEdit}) => {
 
     return (
 
@@ -38,6 +40,8 @@ const Edit = ({player, origin, setOrigin}) => {
             </tr>
         </table>
         <br/>
+        <Button variant="outlined" onClick={onEdit(player.id, origin)}>수정완료해부루</Button>
+        <Button variant="outlined" color="error" onClick={ handleEdit }>돌아가부루</Button>
         </>
 
     )

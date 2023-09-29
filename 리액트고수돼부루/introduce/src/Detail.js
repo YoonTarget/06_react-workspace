@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Button from '@mui/material/Button';
 import Origin from "./Origin";
 import Edit from "./Edit";
 
-const Detail = ({data, onEdit, onRemove, navigate}) => {
+const Detail = ({data, onEdit, onRemove}) => {
 
     const {id} = useParams();
 
     const player = data[id - 1];
 
+    const navigate = useNavigate();
+
     const handleRemove = () => {
         if(window.confirm(`기호 ${id}번 선수를 참말로 삭제할껴??`)) {
             onRemove(player.id);
 
-            {navigate('/')};
+            navigate('/');
         }
     }
 
@@ -36,17 +37,13 @@ const Detail = ({data, onEdit, onRemove, navigate}) => {
                 edit == false ? 
                 (  
                     <>
-                    <Origin player={player}/>
-                    <Button variant="outlined" onClick={handleEdit}>수정해부루</Button>
-                    <Button variant="outlined" color="error" onClick={handleRemove}>삭제해부루</Button>
+                    <Origin player={player} handleEdit={handleEdit} handleRemove={handleRemove}/>
                     </>
                 )
                  : 
                 (
                     <>
-                    <Edit player={player} origin={origin} setOrigin={setOrigin}/>
-                    <Button variant="outlined" onClick={handleEdit}>수정완료해부루</Button>
-                    <Button variant="outlined" color="error" onClick={() => { {navigate(-1)} }}>돌아가부루</Button>
+                    <Edit player={player} origin={origin} setOrigin={setOrigin} onEdit={onEdit} handleEdit={handleEdit}/>
                     </>
                 )
             }

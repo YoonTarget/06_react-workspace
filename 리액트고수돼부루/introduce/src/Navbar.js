@@ -121,10 +121,10 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={() => {
                   if(page == "홈으로 가자잉") {
-                    navigate("/")
+                    navigate("/");
                   }
                   else {
-                    navigate("/Add")
+                    navigate("/Add");
                   }
                 }}
                 sx={{ my: 2, color: 'white', display: 'block' }}

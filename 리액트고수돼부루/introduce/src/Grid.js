@@ -3,10 +3,6 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import player1 from './img/player1.webp';
-import player2 from './img/player2.webp';
-import player3 from './img/player3.webp';
-import { useState } from 'react';
 import PlayerCard from './PlayerCard';
 
 const Item = styled(Paper)(({ theme }) => ({
